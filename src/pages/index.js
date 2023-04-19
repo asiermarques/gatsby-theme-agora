@@ -9,8 +9,6 @@ export default () =>
         </Layout>
 
 export function Head() {
-    return <PageHead
-        bodyClassName={"home"}
-        title={"conference"}
-        description={"conference"}></PageHead>
+    return <PageHead bodyClassName={"home"}></PageHead>;
 }
+
