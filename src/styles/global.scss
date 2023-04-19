@@ -1,0 +1,40 @@
+$primary:       #3c5282 ;
+$light:         #eeeee4;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+header{
+  background: $primary;
+  color: $light;
+  h2{
+    font-weight: lighter;
+  }
+}
+header.home{
+  padding: 80px 0;
+  text-align: center;
+  a.logo{
+    display: inline-block;
+    margin-bottom: 40px;
+    img{
+      width: 200px;
+      height: auto;
+    }
+  }
+  h1{
+    text-transform: uppercase;
+  }
+}
+
+.organizer{
+  margin-bottom: 25px;
+}
+
+#summary{
+  padding: 40px;
+  text-align: center;
+}
+
+footer{
+  padding: 40px 0 80px 0;
+  background: $light;
+}
