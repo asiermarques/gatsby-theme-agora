@@ -1,8 +1,9 @@
 import React from 'react';
+import nl2br from "react-nl2br";
 import LogoImage from "./LogoImage";
 import {Link} from "gatsby";
 
-export default ({conferenceName, conferenceClaim, conferenceDate, cta}) => <>
+export default ({conferenceClaim, conferenceDate, cta}) => <>
     <header className={"home"}>
         <div className="container">
             <Link className={"logo"}
@@ -11,9 +12,9 @@ export default ({conferenceName, conferenceClaim, conferenceDate, cta}) => <>
             </Link>
             <h1>{conferenceClaim}</h1>
             <h2>{conferenceDate}</h2>
-            {cta ? <a className="btn btn-primary"
+            {cta && <a className="btn btn-secondary"
                                  href={cta.link}
-                                 title={cta.text}>{cta.text}</a> : ""}
+                                 title={cta.text}>{nl2br(cta.text)}</a>}
         </div>
     </header>
 </>
