@@ -51,6 +51,10 @@ header.home{
 #summary{
   padding: 80px 0;
   text-align: center;
+  a.btn{
+    text-decoration: underline;
+    color: $main-color2;
+  }
 }
 
 #internal-page{
