@@ -1,8 +1,8 @@
 module.exports = {
   conferenceName: "Our awesome conference",
   conferenceDate: "5th May, Bilbao",
-  conferenceClaim:
-    "A great conference for developers and other mystical creatures",
+  conferenceClaim: "A great conference for developers and other mystical creatures",
+  bannerImage: "/images/banner.png",
   conferenceHashtag: "#hashtag",
   summary: {
     title: "Your awesome",
