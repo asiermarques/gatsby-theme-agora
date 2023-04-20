@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-conferencer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "author": "Asier Marqués <asiermarques@gmail.com> (@asiermarques)",
   "license": "MIT",
@@ -21,6 +21,7 @@
     "bootstrap": "5.3.0-alpha3",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-remote-images": "^3.6.5",
     "gatsby-plugin-sass": "^6.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-sitemap": "^6.9.0",

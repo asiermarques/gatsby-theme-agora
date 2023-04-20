@@ -30,6 +30,15 @@ module.exports = (themeOptions) => {
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: 'OrganizersYaml',
+                imagePath: 'image',
+                // OPTIONAL: Name you want to give new image field on the node.
+                name: 'imageProcessed',
+            },
+        },
+        {
           resolve: 'gatsby-source-filesystem',
           options: {
             "name": "images",

@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticImage} from "gatsby-plugin-image";
+import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
 import useStrings from "../hooks/use-strings";
 
 const strings = useStrings('es');
@@ -16,8 +16,8 @@ const Organizers = ({ organizers }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src={organizer.image}
+              <GatsbyImage
+                image={organizer.imageProcessed.childImageSharp.gatsbyImageData}
                 alt={organizer.name}
                 className="img-thumbnail"
               />

@@ -39,6 +39,9 @@ header.home{
   h1{
     text-transform: uppercase;
   }
+  h1, h2{
+    color: $light;
+  }
 }
 
 .organizer{

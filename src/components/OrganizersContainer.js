@@ -10,6 +10,11 @@ const OrganizersContainer = () => (
           nodes {
             name
             image 
+            imageProcessed {
+                childImageSharp {
+                  gatsbyImageData(width: 400)
+                }
+            }
             link
           }
         }
