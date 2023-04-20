@@ -10,6 +10,8 @@ export default () => <StaticQuery
             conferenceName 
             conferenceDate
             conferenceClaim
+            ticketsCTALink
+            ticketsCTAText
           }
         }
       }
@@ -19,4 +21,5 @@ export default () => <StaticQuery
             conferenceName={data.site.siteMetadata.conferenceName}
             conferenceClaim={data.site.siteMetadata.conferenceClaim}
             conferenceDate={data.site.siteMetadata.conferenceDate}
+            cta={{link: data.site.siteMetadata.ticketsCTALink, text: data.site.siteMetadata.ticketsCTAText}}
         />)}/>

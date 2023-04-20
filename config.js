@@ -2,6 +2,8 @@ module.exports = {
   conferenceName: "Our awesome conference",
   conferenceDate: "5th May, Bilbao",
   conferenceClaim: "A great conference for developers and other mystical creatures",
+  ticketsCTALink: "https://www.eventbrite.com/e/entradas-devopsconfes-bilbao-meetup-5-de-mayo-621627493567",
+  ticketsCTAText: "Reserva tu sitio",
   bannerImage: "/images/banner.png",
   conferenceHashtag: "#hashtag",
   summary: {

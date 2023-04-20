@@ -9,6 +9,10 @@ header{
   h2{
     font-weight: lighter;
   }
+  a.btn{
+    margin-top: 0.8rem;
+    border: 1px solid $light;
+  }
 }
 header.home{
   padding: 80px 0;
