@@ -9,6 +9,7 @@ export default ({bodyClassName, title, description }) => <StaticQuery
             conferenceDate
             conferenceHashtag
             conferenceName
+            conferenceClaim
           }
         }
       }
@@ -17,6 +18,9 @@ export default ({bodyClassName, title, description }) => <StaticQuery
         <html lang="en" />
         <body className={bodyClassName} />
         <title>{title?title:data.site.siteMetadata.conferenceName}</title>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
         <meta name={"description"}
-              content={description?description:data.site.siteMetadata.conferenceName + ", " + data.site.siteMetadata.conferenceDate}/>
+              content={description?description:data.site.siteMetadata.conferenceClaim + ", " + data.site.siteMetadata.conferenceDate}/>
         </>)}/>

@@ -6,7 +6,7 @@ export default ({summary, conferenceHashtag}) =>
             <h2>
                 {conferenceHashtag}
             </h2>
-            <p>{summary.description}</p>
+            <p className={"col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-12"}>{summary.description}</p>
             <p>
                 <a className={"btn btn-outline-primary"} href={summary.ctaLink}>{summary.ctaText}</a>
             </p>

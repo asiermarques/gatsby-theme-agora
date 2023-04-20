@@ -1,10 +1,11 @@
 import React from "react";
+import { StaticImage} from "gatsby-plugin-image";
 import useStrings from "../hooks/use-strings";
 
 const strings = useStrings('es');
 const Organizers = ({ organizers }) => (
   <>
-    <h3>{strings.organizers_title}</h3>
+    <h4>{strings.organizers_title}</h4>
     <div className="row justify-content-start">
       {organizers.length &&
         organizers.map((organizer, index) => (

@@ -1,4 +1,4 @@
-const defaultConfig = require("../gatsby-theme-conferencer/config");
+const defaultConfig = require("./config");
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -14,7 +14,7 @@ module.exports = (themeOptions) => {
         {
           resolve: 'gatsby-plugin-manifest',
           options: {
-            "icon": "content/images/favicon-32x32.png"
+            "icon": "content/images/favicon.png"
           }
         },
         "gatsby-transformer-remark",

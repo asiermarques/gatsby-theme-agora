@@ -9,7 +9,7 @@ const OrganizersContainer = () => (
         allOrganizersYaml {
           nodes {
             name
-            image
+            image 
             link
           }
         }
