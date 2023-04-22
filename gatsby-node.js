@@ -1,6 +1,7 @@
 const path = require("path");
 const speakerNode = require("./gatsby-node-speaker");
 const talkNode = require("./gatsby-node-talk");
+const pageNode = require("./gatsby-node-page");
 exports.createSchemaCustomization = ({ actions, schema }) => {
     const { createTypes } = actions
 
@@ -51,4 +52,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const {createPage} = actions;
     await speakerNode.createSpeakerPages({graphql, createPage, reporter});
     await talkNode.createTalkPages({graphql, createPage, reporter});
+    await pageNode.createPages({graphql, createPage, reporter});
 }

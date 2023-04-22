@@ -66,7 +66,7 @@ module.exports = (themeOptions) => {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `./content/pages`,
-                name: "pages"
+                name: "page"
             },
         },
         {

@@ -18,9 +18,7 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
                 }
                 title
               }
-              internal {
-                content
-              }
+              html
               fileAbsolutePath
             }
           }
@@ -52,7 +50,7 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
                     name: speakerData.name,
                     title: speakerData.title,
                     social: speakerData.social,
-                    bio: node.internal.content
+                    bio: node.html
                 }
             },
         })
