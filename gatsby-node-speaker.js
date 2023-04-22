@@ -1,12 +1,10 @@
-
 exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
     const speakersResult = await graphql(`
         {
-          allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content/speakers)/"}}) {
+          allMarkdownRemark(filter: {fields: {collection: {eq: "speaker"}}}) {
             nodes {
               frontmatter {
                 name
-                slug
                 key
                 image {
                   childImageSharp {
@@ -23,6 +21,7 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
               internal {
                 content
               }
+              fileAbsolutePath
             }
           }
         }
@@ -34,8 +33,14 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
 
     const speakerTemplate = require.resolve(`./src/templates/speaker.js`);
     speakersResult.data.allMarkdownRemark.nodes.forEach(( node ) => {
+        ["key", "image", "name"].forEach(key => {
+            if(!node.frontmatter[key])
+                throw Error(`There is no ${key} field in file ${node.fileAbsolutePath}`)
+        });
+
         const speakerData = node.frontmatter;
         const path = `speakers/${speakerData.key}`;
+
         createPage({
             path,
             component: speakerTemplate,
@@ -53,3 +58,4 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
         })
     });
 }
+

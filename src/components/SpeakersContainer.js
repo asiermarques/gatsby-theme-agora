@@ -5,7 +5,7 @@ import Speakers from "./Speakers";
 export default () => {
     const data = useStaticQuery(graphql`
           query {
-            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content/speakers)/"}}) {
+            allMarkdownRemark(filter: {fields: {collection: {eq: "speaker"}}}){
                 nodes {
                   frontmatter {
                     name

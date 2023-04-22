@@ -15,7 +15,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             interfaces: ["Node"],
         }),
         schema.buildObjectType({
-            name: "SocialNode",
+            name: "MarkdownRemarkFrontmatterSocial",
             fields: {
                 twitter: "String",
                 linkedin: "String",
@@ -23,18 +23,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             },
             interfaces: ["Node"],
         }),
-        /*schema.buildObjectType({
-            name: "Speaker",
-            fields: {
-                key: "String!",
-                name: "String!",
-                title: "String",
-                image: "String!",
-                bio: "String",
-                social: "SocialNode"
-            },
-            interfaces: ["Node"],
-        }),*/
         schema.buildObjectType({
             name: "LinksYaml",
             fields: {
@@ -45,6 +33,18 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         }),
     ];
     createTypes(typeDefs);
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+    if (node.internal.type === 'MarkdownRemark') {
+        const instanceName = getNode(node.parent).sourceInstanceName
+        const { createNodeField } = actions;
+        createNodeField({
+            name: `collection`,
+            node,
+            value: instanceName
+        });
+    }
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {

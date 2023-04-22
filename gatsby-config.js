@@ -15,20 +15,13 @@ module.exports = (themeOptions) => {
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         "gatsby-transformer-remark",
-        `gatsby-transformer-yaml`,
+        "gatsby-transformer-yaml",
         "gatsby-plugin-image",
         {
           resolve: 'gatsby-plugin-manifest',
           options: {
             "icon": "static/images/favicon.png"
           }
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `./content/speakers`,
-                name: "speaker"
-            },
         },
         {
             resolve: "gatsby-transformer-yaml",
@@ -56,12 +49,25 @@ module.exports = (themeOptions) => {
           __key: "images"
         },
         {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-            "name": "pages",
-            "path": "./content/pages/"
-          },
-          __key: "pages"
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./content/speakers`,
+                name: "speaker"
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./content/talks`,
+                name: "talk"
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./content/pages`,
+                name: "pages"
+            },
         },
         {
             resolve: `gatsby-source-filesystem`,

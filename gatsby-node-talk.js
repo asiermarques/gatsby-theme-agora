@@ -1,7 +1,8 @@
 
+
 exports.createTalkPages = async ({ graphql, createPage, reporter }) => {
     const talksResult = await graphql(`{
-      speakers:allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content/speakers)/"}}) {
+      speakers:allMarkdownRemark(filter: {fields: {collection: {eq: "speaker"}}}) {
         nodes {
           frontmatter {
             name
@@ -15,8 +16,9 @@ exports.createTalkPages = async ({ graphql, createPage, reporter }) => {
           html
         }
       }
-      talks:allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content/talks)/"}}) {
+      talks:allMarkdownRemark(filter: {fields: {collection: {eq: "talk"}}}) {
         nodes {
+          fileAbsolutePath
           frontmatter {
             speakers
             key
@@ -39,6 +41,13 @@ exports.createTalkPages = async ({ graphql, createPage, reporter }) => {
         }
     });
     talksResult.data.talks.nodes.forEach(( node ) => {
+        ["key", "title", "speakers"].forEach(key => {
+            if(!node.frontmatter[key])
+                throw Error(`There is no ${key} field in file ${node.fileAbsolutePath}`)
+        });
+        if(node.frontmatter.speakers.length<1)
+            throw Error(`No speakers specified in ${node.fileAbsolutePath}`)
+
         const talkData = node.frontmatter;
         const path = `talks/${talkData.key}`;
         createPage({
