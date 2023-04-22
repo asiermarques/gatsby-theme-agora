@@ -1,16 +1,20 @@
 import * as React from "react"
 import Layout from "../components/Layout";
-import PageHead from "../components/PageHead";
+import PageHead from "../components/PageHeadContainer";
 import HomeSummary from "../components/HomeSummaryContainer";
-import LocationContainer from "../components/LocationContainer";
+import Location from "../components/LocationContainer";
+import Speakers from "../components/SpeakersContainer";
+import Agenda from "../components/AgendaContainer";
 
 export default () =>
         <Layout isHome={true}>
             <HomeSummary/>
-            <LocationContainer/>
+            <Speakers/>
+            <Agenda/>
+            <Location/>
         </Layout>
 
 export function Head() {
-    return <PageHead bodyClassName={"home"}></PageHead>;
+    return <PageHead bodyClassName={"home"}/>;
 }
 

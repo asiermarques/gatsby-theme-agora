@@ -1,9 +1,13 @@
 import React from 'react';
+import {Link} from "gatsby";
+import LogoImage from "./LogoImage";
 
-export default () => <>
+export default ({conferenceName}) => <>
     <header>
         <div className="container">
-            <h1>DevopsConf <span></span></h1>
+            <Link to={"/"} title={conferenceName} className={"logo"}>
+                <LogoImage/>
+            </Link>
         </div>
     </header>
 </>

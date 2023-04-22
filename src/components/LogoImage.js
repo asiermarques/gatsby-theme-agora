@@ -5,5 +5,6 @@ export default (alt) => {
     return <StaticImage
         src="../../static/images/logo.png"
         alt="Conference Logo"
+        imgStyle={{ transition: 'none' }}
     />
 }

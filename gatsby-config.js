@@ -1,4 +1,6 @@
 const defaultConfig = require("./config");
+const path = require("path");
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -9,15 +11,25 @@ module.exports = (themeOptions) => {
     siteMetadata: config,
     plugins: [
         "gatsby-plugin-sass",
-        "gatsby-plugin-image",
         "gatsby-plugin-sitemap",
+        "gatsby-plugin-sharp",
+        "gatsby-transformer-sharp",
+        "gatsby-transformer-remark",
+        `gatsby-transformer-yaml`,
+        "gatsby-plugin-image",
         {
           resolve: 'gatsby-plugin-manifest',
           options: {
             "icon": "static/images/favicon.png"
           }
         },
-        "gatsby-transformer-remark",
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `./content/speakers`,
+                name: "speaker"
+            },
+        },
         {
             resolve: "gatsby-transformer-yaml",
             options: {
@@ -27,14 +39,11 @@ module.exports = (themeOptions) => {
                 },
             },
         },
-        "gatsby-plugin-sharp",
-        "gatsby-transformer-sharp",
         {
             resolve: `gatsby-plugin-remote-images`,
             options: {
                 nodeType: 'OrganizersYaml',
                 imagePath: 'image',
-                // OPTIONAL: Name you want to give new image field on the node.
                 name: 'imageProcessed',
             },
         },
@@ -42,7 +51,7 @@ module.exports = (themeOptions) => {
           resolve: 'gatsby-source-filesystem',
           options: {
             "name": "images",
-            "path": `${__dirname}/static/images/`
+            "path": `./static/images/`
           },
           __key: "images"
         },
@@ -54,7 +63,6 @@ module.exports = (themeOptions) => {
           },
           __key: "pages"
         },
-        `gatsby-transformer-yaml`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

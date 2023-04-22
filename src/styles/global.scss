@@ -17,9 +17,20 @@ $font-size-base:  1.6rem;
 
 header{
   background: $primary;
+  padding: 2rem 0;
   color: $light;
-  h2{
-    font-weight: lighter;
+  a{
+    text-decoration: none;
+  }
+  a, h1{
+    color: $light;
+  }
+  a.logo{
+    display: inline-block;
+    img{
+      width: 100px;
+      height: auto;
+    }
   }
   a.btn{
     margin-top: 0.8rem;
@@ -42,6 +53,9 @@ header.home{
   h1, h2{
     color: $light;
   }
+  h2{
+    font-weight: lighter;
+  }
 }
 
 .organizer{
@@ -59,6 +73,72 @@ header.home{
 
 #internal-page{
   padding: 40px 0;
+}
+
+#speaker-detail, #talk-detail{
+  padding: 4rem;
+  border-bottom: 1px solid $secondary;
+  font-size: 1.4rem;
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+}
+#talk-detail{
+  .speaker-in-talk{
+    margin: 4rem 0;
+  }
+}
+
+#speakers{
+  padding: 2rem 0 4rem 0;
+  a.speaker-card{
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4rem;
+    .image{
+      background-size: cover;
+      background-color: $gray-500;
+      height: 300px;
+      display: block;
+      filter: $gray-300; /* IE6-9 */
+      -webkit-filter: grayscale(100%);
+    }
+    .image:hover{
+      -webkit-filter: grayscale(0%);
+    }
+
+    .info{
+      margin-top: 1rem;
+      display: block;
+      font-size: 1.2rem;
+      h4{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+#agenda{
+  margin-bottom: 6rem;
+  h2{
+    text-align: center;
+  }
+  table{
+    margin: 0 0 4rem 0;
+    th{
+      text-align: center;
+    }
+    td, th{
+      padding: 1.5rem 0;
+    }
+  }
+  .agenda_row{
+    span{display: block}
+    span.description{font-size: 1.2rem}
+  }
 }
 
 section.location {

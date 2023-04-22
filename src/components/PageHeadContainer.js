@@ -16,8 +16,11 @@ export default ({bodyClassName, title, description}) => {
                 }
               }
         `);
-    const titleHtml = title ? title : data.site.siteMetadata.conferenceName;
-    const descriptionHtml = description ? description
+    const titleHtml = title ?
+        title + " | " + data.site.siteMetadata.conferenceName
+        : data.site.siteMetadata.conferenceName;
+    const descriptionHtml = description ?
+        description
         : data.site.siteMetadata.conferenceClaim + ", " + data.site.siteMetadata.conferenceDate;
     const ogImage = data.site.siteMetadata.bannerImage;
     return <PageHead title={titleHtml}
