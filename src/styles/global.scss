@@ -137,7 +137,7 @@ header.home{
     }
   }
   .agenda_row{
-    span{display: block}
+    span, a{display: block; padding: 0 1rem}
     span.description{font-size: 1.2rem}
   }
 }

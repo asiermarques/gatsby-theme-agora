@@ -8,7 +8,7 @@ const Organizers = ({ speakers }) => (
         <div className="row">
             {speakers.length &&
                 speakers.map((speaker, index) => (
-                    <div key={index} className="col-6 col-md-4">
+                    <div key={index} className="col-12 col-md-4">
                         <Link to={`speakers/${speaker.key}`}
                               className={"speaker-card"}>
                             <div className="image"
