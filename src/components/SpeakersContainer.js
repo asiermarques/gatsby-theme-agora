@@ -5,7 +5,7 @@ import Speakers from "./Speakers";
 export default () => {
     const data = useStaticQuery(graphql`
           query {
-            allMarkdownRemark(filter: {fields: {collection: {eq: "speaker"}}}){
+            allMarkdownRemark(filter: {fields: {collection: {eq: "speaker"}}}, sort: {fileAbsolutePath: ASC}){
                 nodes {
                   frontmatter {
                     name
