@@ -12,6 +12,12 @@ exports.createTalkPages = async ({ graphql, createPage, reporter }) => {
                 gatsbyImageData
               }
             }
+            social {
+                  github
+                  linkedin
+                  twitter
+                }
+            title
           }
           html
         }
