@@ -7,6 +7,7 @@ export default () => <StaticQuery
       query {
         site {
           siteMetadata {
+            conferenceName
             conferenceName 
             conferenceDate
             conferenceClaim
@@ -18,6 +19,7 @@ export default () => <StaticQuery
     `}
     render={(data) => (
         <HeaderHome
+            conferenceName={data.site.siteMetadata.conferenceName}
             conferenceClaim={data.site.siteMetadata.conferenceClaim}
             conferenceDate={data.site.siteMetadata.conferenceDate}
             cta={{link: data.site.siteMetadata.ticketsCTALink, text: data.site.siteMetadata.ticketsCTAText}}

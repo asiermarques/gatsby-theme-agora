@@ -1,10 +1,10 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image"
 
-export default (alt) => {
-    return <StaticImage
-        src="../../static/images/logo.png"
-        alt="Conference Logo"
-        imgStyle={{ transition: 'none' }}
-    />
-}
+const Logo = (alt) => <StaticImage
+    src="../../static/images/logo.png"
+    imgStyle={{ transition: 'none', transform: 'none', willChange: 'inherit' }}
+    alt={alt}
+/>;
+
+export default Logo;

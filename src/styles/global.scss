@@ -77,7 +77,7 @@ header.home{
 }
 
 #speaker-detail, #talk-detail, #page-detail{
-  padding: 4rem;
+  padding: 4rem 0;
   border-bottom: 1px solid $secondary;
   font-size: 1.4rem;
   h1{
@@ -87,11 +87,25 @@ header.home{
     font-size: 2rem;
     margin-top: 1.5rem;
   }
+  .speaker-summary{
+    .speaker-in-talk{
+      margin: 4rem 0;
+    }
+    .image{
+      margin-bottom: 1.4rem;
+    }
+    .social{
+      a.social-icon{
+        background-color: $primary;
+        width: 10px;
+        height: 10px;
+        margin: 0 0.4rem;
+      }
+    }
+  }
 }
 #talk-detail{
-  .speaker-in-talk{
-    margin: 4rem 0;
-  }
+
 }
 
 #speakers{
@@ -147,6 +161,9 @@ section.location {
   background: $main-color1;
   color: $light;
   font-size: 1.4rem;
+  h4{
+    color: $light;
+  }
   .map {
     padding: 0;
   }

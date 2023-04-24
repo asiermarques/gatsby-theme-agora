@@ -6,7 +6,7 @@ export default ({conferenceName}) => <>
     <header>
         <div className="container">
             <Link to={"/"} title={conferenceName} className={"logo"}>
-                <LogoImage/>
+                <LogoImage alt={conferenceName}/>
             </Link>
         </div>
     </header>

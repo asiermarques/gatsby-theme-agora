@@ -1,14 +1,14 @@
 import React from 'react';
 import nl2br from "react-nl2br";
-import LogoImage from "./LogoImage";
 import {Link} from "gatsby";
+import LogoImage from "./LogoImage";
 
-export default ({conferenceClaim, conferenceDate, cta}) => <>
+export default ({conferenceClaim, conferenceName, conferenceDate, cta}) => <>
     <header className={"home"}>
         <div className="container">
             <Link className={"logo"}
                 to={"/"}>
-                <LogoImage/>
+                <LogoImage alt={conferenceName}/>
             </Link>
             <h1>{conferenceClaim}</h1>
             <h2>{conferenceDate}</h2>

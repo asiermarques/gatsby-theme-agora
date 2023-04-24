@@ -1,4 +1,5 @@
 module.exports = {
+  siteUrl: "https://conference.com",
   conferenceName: "Our awesome conference",
   conferenceDate: "5th May, Bilbao",
   conferenceClaim: "A great conference for developers and other mystical creatures",
@@ -11,7 +12,6 @@ module.exports = {
     address: "Edificio BAT, Auditorio 6ª Planta\n Gran Vía de Don Diego López de Haro 1\n 48001 Bilbo, Bizkaia, España"
   },
   summary: {
-    title: "Your awesome",
     description:
       "A little description for the conference, what is the audience, why is interesting to the people and this kind of stuff",
     ctaText: "Agenda and tickets soon",

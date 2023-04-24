@@ -7,6 +7,7 @@ export default ({bodyClassName, title, description}) => {
               query {
                 site {
                   siteMetadata {
+                    siteUrl
                     conferenceDate
                     conferenceHashtag
                     conferenceName

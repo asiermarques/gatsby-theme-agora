@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-conferencer",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "index.js",
   "author": "Asier Marqués <asiermarques@gmail.com> (@asiermarques)",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^5.9.0",
     "gatsby-transformer-yaml": "^5.9.0",
     "react-nl2br": "^1.0.4",
+    "react-social-icons": "^5.15.0",
     "sass": "^1.62.0"
   },
   "scripts": {
