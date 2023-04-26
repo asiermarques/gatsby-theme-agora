@@ -50,7 +50,7 @@ export class AgendaGraphqlRepository implements AgendaRepository {
         }`);
 
         const agendaCollectionDTO:AgendaCollectionDTO = {
-            speakers: data.talks.nodes.map((node: any) => ({
+            speakers: data.speakers.nodes.map((node: any) => ({
                 internal: node.internal,
                 ...node.frontmatter})),
             talks: data.talks.nodes.map((node: any) => ({

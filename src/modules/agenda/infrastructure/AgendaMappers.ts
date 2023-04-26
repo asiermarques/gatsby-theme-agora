@@ -10,8 +10,7 @@ const TalkTrackContentMapper = (talks: AgendaTalkDTO[], speakers: AgendaSpeakerD
         return null;
     }
     const talk = talks.map(node => ({
-        speakers: node.speakers.map(key =>
-            speakers.filter(speaker => speaker.key === key).pop()),
+        speakers: node.speakers.map(key => speakers.filter(speaker => speaker.key === key).pop()),
         title: node.title,
         key: node.key,
         link: `/talks/${node.key}`,
@@ -23,7 +22,8 @@ const TalkTrackContentMapper = (talks: AgendaTalkDTO[], speakers: AgendaSpeakerD
         type: TrackContentType.TALK,
         link: talk.link,
         title: talk.title,
-        description: talk.speakers.reduce((acc, current) => `${acc? acc + ", " : ""}${current?.name}` , "")
+        description: talk.speakers.filter((speaker:AgendaSpeakerDTO | undefined): speaker is AgendaSpeakerDTO => !!speaker )
+                                  .reduce((acc:string, current:AgendaSpeakerDTO) => `${acc? acc + ", " : ""}${current.name}` , "")
     }
 }
 
