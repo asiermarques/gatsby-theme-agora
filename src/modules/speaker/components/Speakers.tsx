@@ -10,7 +10,7 @@ const Organizers = ({ speakers }: {speakers: Speaker[]}) => (
             {speakers.length &&
                 speakers.map((speaker) => (
                     <div key={speaker.key} className="col-12 col-md-4">
-                        <Link to={`speakers/${speaker.key}#content`}
+                        <Link to={`speakers/${speaker.key}`}
                               className={"speaker-card"}>
                             <div className="image"
                                  style={{backgroundImage: `url("${getSrc(speaker.image)}")`}}/>

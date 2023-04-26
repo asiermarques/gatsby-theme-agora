@@ -11,7 +11,7 @@ export default ({agendaData}) => <section id={"agenda"}>
             {data.rows.map((row, trIndex) => <tr key={`${agendaIndex}-${trIndex}`} className={"agenda_row"}>
                 <th scope="row">{row.slot}</th>
                 {row.trackContents.map((content, tdIndex) => <td key={`${agendaIndex}-${trIndex}td${tdIndex}`}>
-                    {content.type === TYPE_TALK ? <><Link to={`${content.link}#content`} title={content.title}>{content.title}</Link>
+                    {content.type === TYPE_TALK ? <><Link to={content.link} title={content.title}>{content.title}</Link>
                             <span className={"description"}>{content.description}</span></>
                         : <><span>{content.title}</span><span className={"description"}>{content.description}</span></>}
                 </td>)}
