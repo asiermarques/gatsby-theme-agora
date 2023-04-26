@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-conferencer",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "main": "index.js",
   "author": "Asier Marqués <asiermarques@gmail.com> (@asiermarques)",
   "license": "MIT",
@@ -38,12 +38,23 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "babel-jest": "^29.5.0",
+    "babel-preset-gatsby": "^3.9.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "typescript": "^5.0.4"
   }
 }
