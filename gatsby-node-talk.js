@@ -39,7 +39,7 @@ exports.createTalkPages = async ({ graphql, createPage, reporter }) => {
         return
     }
 
-    const talkTemplate = require.resolve(`./src/templates/talk.js`);
+    const talkTemplate = require.resolve(`./src/modules/talk/templates/talk.tsx`);
     const speakers = talksResult.data.speakers.nodes.map(node => {
         return {
             ...node.frontmatter,

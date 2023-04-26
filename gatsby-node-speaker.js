@@ -29,7 +29,7 @@ exports.createSpeakerPages = async ({ graphql, createPage, reporter }) => {
         return
     }
 
-    const speakerTemplate = require.resolve(`./src/templates/speaker.js`);
+    const speakerTemplate = require.resolve(`./src/modules/speaker/templates/speaker.tsx`);
     speakersResult.data.allMarkdownRemark.nodes.forEach(( node ) => {
         ["key", "image", "name"].forEach(key => {
             if(!node.frontmatter[key])

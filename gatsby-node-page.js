@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, createPage, reporter }) => {
         return
     }
 
-    const internalTemplate = require.resolve(`./src/templates/page.js`);
+    const internalTemplate = require.resolve(`./src/modules/_shared/templates/page.tsx`);
     pageResult.data.allMarkdownRemark.nodes.forEach(( node ) => {
         ["path", "title"].forEach(key => {
             if(!node.frontmatter[key])

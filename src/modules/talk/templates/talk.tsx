@@ -1,0 +1,28 @@
+import * as React from "react"
+import Layout from "../../_shared/components/Layout";
+import PageHead from "../../_shared/components/PageHeadContainer";
+import SpeakerSummary from "../../speaker/components/SpeakerSummary";
+import useStrings from "../../_shared/hooks/use-strings";
+import {Link} from "gatsby";
+import {Speaker} from "../../speaker/domain/Speaker";
+
+const strings = useStrings('es');
+export default (context:any) =>
+    <Layout isHome={false}>
+        <section id={"talk-detail"}>
+            <div className="container">
+                <div className="col-12 col-sm-8 offset-sm-2">
+                    <p><Link to={"/"} title={strings.back_to_home}>{strings.back_to_home}</Link></p>
+                    <h1>{context.pageContext.talk.title}</h1>
+                    <div dangerouslySetInnerHTML={{ __html: context.pageContext.talk.description }}/>
+                    {context.pageContext.talk.speakers.map((speaker:Speaker, index:number) => <div key={index}>
+                        <SpeakerSummary key={speaker.key} speaker={speaker} className={"speaker-in-talk"}/>
+                    </div>)}
+                </div>
+            </div>
+        </section>
+    </Layout>
+
+export function Head(context:any) {
+    return <PageHead bodyClassName={""} title={context.pageContext.talk.title}/>;
+}
