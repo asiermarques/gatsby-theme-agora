@@ -6,7 +6,7 @@ export default ( {items}:{items:Link[]} ) =>
     {items &&
       items.map((item, index) => (
         <li key={index} className="nav-item">
-          <a href={`${item.link}#content`} className="nav-link" title={item.name}>
+          <a href={`${item.link}`} className="nav-link" title={item.name}>
             {item.name}
           </a>
         </li>
