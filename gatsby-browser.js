@@ -1,7 +1,10 @@
-exports.shouldUpdateScroll = ({ routerProps }) => {
-    const isHash = routerProps.location.hash;
-    const gatsbyWrapper = document.getElementById('gatsby-focus-wrapper');
-    gatsbyWrapper && (gatsbyWrapper.scrollTop = 0);
+exports.shouldUpdateScroll = ({
+                                  routerProps: { location },
+                                  getSavedScrollPosition
+                              }) => {
+    const currentPosition = getSavedScrollPosition(location)
+    const queriedPosition = getSavedScrollPosition({ pathname: `/random` })
 
-    return isHash && isHash.replace('#', '');
-};
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false
+}
