@@ -20,9 +20,9 @@ describe("Agenda Component", () => {
       findAll: jest.fn(() => agendaData),
     };
     render(<AgendaContainer agendaRepository={agendaRepositoryMock} />);
-    expect(screen.getByRole("table")).toHaveTextContent("00:00");
-    expect(screen.getByRole("table")).toHaveTextContent("Talk Title");
-    expect(screen.getByRole("table")).toHaveTextContent(
+    expect(screen.getByRole("table", {})).toHaveTextContent("00:00");
+    expect(screen.getByRole("table", {})).toHaveTextContent("Talk Title");
+    expect(screen.getByRole("table", {})).toHaveTextContent(
       "Speaker One, Speaker Two"
     );
   });
@@ -37,8 +37,8 @@ describe("Agenda Component", () => {
       ]),
     };
     render(<AgendaContainer agendaRepository={agendaRepositoryMock} />);
-    expect(screen.queryByRole("table")).not.toBeInTheDocument();
-    expect(screen.getByRole("alert")).toHaveTextContent(
+    expect(screen.queryByRole("table", {})).not.toBeInTheDocument();
+    expect(screen.getByRole("alert", {})).toHaveTextContent(
       "There is not agenda details yet"
     );
   });
