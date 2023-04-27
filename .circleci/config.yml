@@ -14,9 +14,15 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: CI=true yarn test
+          command: yarn test
           name: Run tests
-
+      - run:
+          command: yarn build
+          name: Build app
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
