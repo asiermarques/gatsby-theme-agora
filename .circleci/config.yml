@@ -1,10 +1,15 @@
 version: 2.1
+orbs:
+  node: circleci/node@5.1.0
 jobs:
   build-and-test:
-    docker:
-      - image: cimg/node:20.0.0
+    executor:
+      name: node/default
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
+          node-version: '20.0.0'
       - node/with-cache:
           steps:
             - run: yarn install
