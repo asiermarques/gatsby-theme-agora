@@ -1,5 +1,5 @@
-import {Agenda} from "./Agenda";
+import { Agenda } from "./Agenda";
 
 export default interface AgendaRepository {
-    findAll: () => Agenda[] | Error
+  findAll: () => Agenda[] | Error;
 }

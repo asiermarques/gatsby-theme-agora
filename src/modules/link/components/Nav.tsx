@@ -1,8 +1,8 @@
 import React from "react";
-import {Link} from "../domain/Link";
+import { Link } from "../domain/Link";
 
-export default ( {items}:{items:Link[]} ) =>
-    <ul className="nav flex-column">
+export default ({ items }: { items: Link[] }) => (
+  <ul className="nav flex-column">
     {items &&
       items.map((item, index) => (
         <li key={index} className="nav-item">
@@ -11,4 +11,5 @@ export default ( {items}:{items:Link[]} ) =>
           </a>
         </li>
       ))}
-    </ul>;
+  </ul>
+);

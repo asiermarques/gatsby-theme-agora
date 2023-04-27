@@ -9,22 +9,18 @@ const OrganizersContainer = () => (
         allOrganizersYaml {
           nodes {
             name
-            image 
+            image
             imageProcessed {
-                childImageSharp {
-                  gatsbyImageData(width: 400)
-                }
+              childImageSharp {
+                gatsbyImageData(width: 400)
+              }
             }
             link
           }
         }
       }
     `}
-    render={(data) => (
-      <Organizers
-        organizers={data.allOrganizersYaml.nodes}
-      />
-    )}
+    render={(data) => <Organizers organizers={data.allOrganizersYaml.nodes} />}
   />
 );
 

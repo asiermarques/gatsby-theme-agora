@@ -1,15 +1,15 @@
 import React from "react";
 import Organizers from "../../organizer/components/OrganizersContainer";
 import Nav from "../../link/components/Nav";
-import {Link} from "../../link/domain/Link";
+import { Link } from "../../link/domain/Link";
 
-export default ({ links }:{links:Link[]}) =>
+export default ({ links }: { links: Link[] }) => (
   <footer>
     <section id="about">
       <div className="container">
         <div className="row">
           <div className="col-md-7">
-            <Organizers/>
+            <Organizers />
           </div>
           <div className="col-md-5 text-center">
             <Nav items={links} />
@@ -17,4 +17,5 @@ export default ({ links }:{links:Link[]}) =>
         </div>
       </div>
     </section>
-  </footer>;
+  </footer>
+);

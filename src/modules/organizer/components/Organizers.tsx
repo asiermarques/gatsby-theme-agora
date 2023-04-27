@@ -1,8 +1,8 @@
 import React from "react";
-import {GatsbyImage} from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import useStrings from "../../_shared/hooks/use-strings";
 
-const strings = useStrings('es');
+const strings = useStrings("es");
 const Organizers = ({ organizers }) => (
   <>
     <h4>{strings.organizers_title}</h4>
@@ -16,11 +16,15 @@ const Organizers = ({ organizers }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-                {organizer.imageProcessed?.childImageSharp?.gatsbyImageData && <GatsbyImage
-                    image={organizer.imageProcessed?.childImageSharp?.gatsbyImageData}
-                    alt={organizer.name}
-                    className="img-thumbnail"
-                  />}
+              {organizer.imageProcessed?.childImageSharp?.gatsbyImageData && (
+                <GatsbyImage
+                  image={
+                    organizer.imageProcessed?.childImageSharp?.gatsbyImageData
+                  }
+                  alt={organizer.name}
+                  className="img-thumbnail"
+                />
+              )}
             </a>
           </div>
         ))}

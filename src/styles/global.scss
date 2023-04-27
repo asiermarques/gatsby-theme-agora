@@ -1,101 +1,105 @@
 // https://coolors.co/palette/ffffff-6aa0c4-a3ce54-2f4858-ad3522
 
-$light:           #FFFFFF;
-$primary:         #2F4858;
-$secondary:        #A3CE54;
-$main-color1:        $primary;
-$main-color2:        #AD3522;
-$main-color3:        $light;
-$main-color4:        #6AA0C4;
-$main-color5:        $secondary;
+$light: #ffffff;
+$primary: #2f4858;
+$secondary: #a3ce54;
+$main-color1: $primary;
+$main-color2: #ad3522;
+$main-color3: $light;
+$main-color4: #6aa0c4;
+$main-color5: $secondary;
 $enable-rounded: false;
 
 $headings-color: $primary;
 
-$font-size-base:  1.6rem;
+$font-size-base: 1.6rem;
 @import "~bootstrap/scss/bootstrap";
 
-header{
+header {
   background: $primary;
   padding: 2rem 0;
   color: $light;
-  a{
+  a {
     text-decoration: none;
   }
-  a, h1{
+  a,
+  h1 {
     color: $light;
   }
-  a.logo{
+  a.logo {
     display: block;
     text-align: center;
-    img{
+    img {
       width: 100px;
       height: auto;
     }
   }
-  a.btn{
+  a.btn {
     margin-top: 0.8rem;
   }
 }
-header.home{
+header.home {
   padding: 80px 0;
   text-align: center;
-  a.logo{
+  a.logo {
     display: inline-block;
     margin-bottom: 40px;
-    img{
+    img {
       width: 200px;
       height: auto;
     }
   }
-  h1{
+  h1 {
     text-transform: uppercase;
   }
-  h1, h2{
+  h1,
+  h2 {
     color: $light;
   }
-  h2{
+  h2 {
     font-weight: lighter;
   }
 }
 
-.organizer{
+.organizer {
   margin-bottom: 25px;
 }
 
-#summary{
+#summary {
   padding: 80px 0;
   text-align: center;
-  a.btn{
+  a.btn {
     text-decoration: underline;
     color: $main-color2;
   }
 }
 
-#internal-page{
+#internal-page {
   padding: 40px 0;
 }
 
-#speaker-detail, #talk-detail, #page-detail{
+#speaker-detail,
+#talk-detail,
+#page-detail {
   padding: 4rem 0;
   border-bottom: 1px solid $secondary;
   font-size: 1.4rem;
-  h1{
+  h1 {
     font-size: 3rem;
   }
-  h2{
+  h2 {
     font-size: 2rem;
     margin-top: 1.5rem;
   }
-  .speaker-summary{
-    .speaker-in-talk{
+  .speaker-summary {
+    .speaker-in-talk {
       margin: 4rem 0;
     }
-    .image{
+    .image {
       margin-bottom: 1.4rem;
     }
-    .social{
-      a.social-icon{
+    .social {
+      a.social-icon {
         background-color: $primary;
         width: 10px;
         height: 10px;
@@ -104,17 +108,16 @@ header.home{
     }
   }
 }
-#talk-detail{
-
+#talk-detail {
 }
 
-#speakers{
+#speakers {
   padding: 2rem 0 4rem 0;
-  a.speaker-card{
+  a.speaker-card {
     text-decoration: none;
     display: block;
     margin-bottom: 4rem;
-    .image{
+    .image {
       background-size: cover;
       background-color: $gray-500;
       height: 300px;
@@ -122,38 +125,45 @@ header.home{
       filter: $gray-300; /* IE6-9 */
       -webkit-filter: grayscale(100%);
     }
-    .image:hover{
+    .image:hover {
       -webkit-filter: grayscale(0%);
     }
 
-    .info{
+    .info {
       margin-top: 1rem;
       display: block;
       font-size: 1.2rem;
-      h4{
+      h4 {
         font-size: 1.6rem;
       }
     }
   }
 }
 
-#agenda{
+#agenda {
   margin-bottom: 6rem;
-  h2{
+  h2 {
     text-align: center;
   }
-  table{
+  table {
     margin: 0 0 4rem 0;
-    th{
+    th {
       text-align: center;
     }
-    td, th{
+    td,
+    th {
       padding: 1.5rem 0;
     }
   }
-  .agenda_row{
-    span, a{display: block; padding: 0 1rem}
-    span.description{font-size: 1.2rem}
+  .agenda_row {
+    span,
+    a {
+      display: block;
+      padding: 0 1rem;
+    }
+    span.description {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -161,21 +171,21 @@ section.location {
   background: $main-color1;
   color: $light;
   font-size: 1.4rem;
-  h4{
+  h4 {
     color: $light;
   }
   .map {
     padding: 0;
   }
-  .address{
+  .address {
     padding: 2rem;
   }
 }
 
-footer{
+footer {
   padding: 40px 0 80px 0;
   background: $light;
-  a.nav-link{
+  a.nav-link {
     text-decoration: underline;
   }
 }

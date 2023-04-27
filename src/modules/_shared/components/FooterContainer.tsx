@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import Footer from "./Footer";
 
-export default () =>
+export default () => (
   <StaticQuery
     query={graphql`
       query {
@@ -14,8 +14,6 @@ export default () =>
         }
       }
     `}
-    render={(data) => (
-      <Footer
-        links={data.allLinksYaml.nodes}
-      />
-    )}/>;
+    render={(data) => <Footer links={data.allLinksYaml.nodes} />}
+  />
+);

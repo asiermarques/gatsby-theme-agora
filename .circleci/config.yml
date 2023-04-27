@@ -23,4 +23,3 @@ workflows:
   tests:
     jobs:
       - tests
-

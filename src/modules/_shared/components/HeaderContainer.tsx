@@ -1,13 +1,14 @@
-import React from 'react';
-import {graphql, StaticQuery} from "gatsby";
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import Header from "./Header";
 
-export default () => <StaticQuery
+export default () => (
+  <StaticQuery
     query={graphql`
       query {
         site {
           siteMetadata {
-            conferenceName 
+            conferenceName
             conferenceDate
             conferenceClaim
             ticketsCTALink
@@ -17,6 +18,7 @@ export default () => <StaticQuery
       }
     `}
     render={(data) => (
-        <Header
-            conferenceName={data.site.siteMetadata.conferenceName}
-        />)}/>
+      <Header conferenceName={data.site.siteMetadata.conferenceName} />
+    )}
+  />
+);

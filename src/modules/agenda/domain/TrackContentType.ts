@@ -1,7 +1,7 @@
 export const TYPE_BLOCK = "block";
-export const TYPE_TALK  = "talk";
+export const TYPE_TALK = "talk";
 
 export enum TrackContentType {
-    BLOCK = "block",
-    TALK  = "talk",
+  BLOCK = "block",
+  TALK = "talk",
 }
