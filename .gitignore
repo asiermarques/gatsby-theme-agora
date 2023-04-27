@@ -4,3 +4,4 @@ public
 .cache
 .dist
 content
+yarn.lock
