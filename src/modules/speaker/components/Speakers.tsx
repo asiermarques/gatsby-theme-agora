@@ -1,5 +1,5 @@
 import React from "react";
-import { GatsbyImage, StaticImage, getSrc } from "gatsby-plugin-image";
+import { getSrc } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Speaker } from "../domain/Speaker";
 

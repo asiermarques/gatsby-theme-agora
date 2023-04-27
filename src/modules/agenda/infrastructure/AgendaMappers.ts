@@ -17,7 +17,7 @@ export type TrackContentMapper = (
 
 const TalkTrackContentMapper =
   (talks: AgendaTalkDTO[], speakers: AgendaSpeakerDTO[]): TrackContentMapper =>
-  (content: AgendaContentDTO) => {
+  (content: AgendaContentDTO): TrackContent | null => {
     if (content.type !== TrackContentType.TALK) {
       return null;
     }
@@ -61,7 +61,7 @@ const TalkTrackContentMapper =
 
 const BlockTrackContentMapper: TrackContentMapper = (
   content: AgendaContentDTO
-) => {
+): TrackContent | null => {
   if (content.type !== TrackContentType.BLOCK) return null;
   return {
     type: TrackContentType.BLOCK,

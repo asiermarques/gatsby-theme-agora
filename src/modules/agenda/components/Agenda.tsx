@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import { TYPE_TALK } from "../domain/TrackContentType";
+import { TrackContentType } from "../domain/TrackContentType";
+import { Agenda } from "../domain/Agenda";
 
-export default ({ agendaData }) => (
+export default ({ agendaData }: { agendaData: Agenda[] }) => (
   <section id={"agenda"}>
     <div className="container">
       <h2>Agenda</h2>
@@ -14,9 +15,9 @@ export default ({ agendaData }) => (
                 <th scope="row">{row.slot}</th>
                 {row.trackContents.map((content, tdIndex) => (
                   <td key={`${agendaIndex}-${trIndex}td${tdIndex}`}>
-                    {content.type === TYPE_TALK ? (
+                    {content.type === TrackContentType.TALK ? (
                       <>
-                        <Link to={content.link} title={content.title}>
+                        <Link to={content.link as string} title={content.title}>
                           {content.title}
                         </Link>
                         <span className={"description"}>

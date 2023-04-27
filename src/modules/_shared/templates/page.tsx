@@ -1,10 +1,9 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import PageHead from "../components/PageHeadContainer";
-import { GatsbyImage } from "gatsby-plugin-image";
 
-export default (context) => (
-  <Layout>
+export default (context: any) => (
+  <Layout isHome={false}>
     <section id={"page-detail"}>
       <div className="container">
         <h1>{context.pageContext.page.title}</h1>
@@ -16,7 +15,7 @@ export default (context) => (
   </Layout>
 );
 
-export function Head(context) {
+export function Head(context: any) {
   return (
     <PageHead
       bodyClassName={"home"}

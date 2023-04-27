@@ -24,6 +24,27 @@ export const agendaDTOStub = (): AgendaDTO => ({
   ],
 });
 
+export const emptyAgendaCollectionDTOStub: AgendaCollectionDTO = {
+  speakers: [],
+  talks: [],
+  agendas: [],
+};
+
+export const agendaCollectionDTOStubWithAnAgendaWithoutContent: AgendaCollectionDTO =
+  {
+    speakers: [],
+    talks: [],
+    agendas: [
+      {
+        venue: "",
+        slots: [],
+        date: "",
+        tracks: [],
+        content: [],
+      },
+    ],
+  };
+
 export const agendaCollectionDTOBasicStub = (): AgendaCollectionDTO => {
   return {
     speakers: [speakerDTOStub()],
