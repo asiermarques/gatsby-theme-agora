@@ -24,7 +24,7 @@ Not yet but prioritized:
 - PostEvent documentation (images, videos, etc)
 - Stats in the home
 
-> **You can open a PR with the label "proposal" to ask for more features!**
+> **You can open [a PR](https://github.com/asiermarques/gatsby-theme-conferencer/pulls) with the label "proposal" to ask for more features!**
 
 ## Using this theme
 

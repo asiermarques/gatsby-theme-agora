@@ -1,24 +1,20 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Header from "./Header";
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            conferenceName
-            conferenceDate
-            conferenceClaim
-            ticketsCTALink
-            ticketsCTAText
-          }
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          conferenceName
+          conferenceDate
+          conferenceClaim
+          ticketsCTALink
+          ticketsCTAText
         }
       }
-    `}
-    render={(data) => (
-      <Header conferenceName={data.site.siteMetadata.conferenceName} />
-    )}
-  />
-);
+    }
+  `);
+  return <Header conferenceName={data.site.siteMetadata.conferenceName} />;
+};

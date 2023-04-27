@@ -1,5 +1,5 @@
 export const speakerDTOStub = () => ({
   key: "speaker",
-  name: "Test Foo",
+  name: "Speaker Name",
   internal: { content: "Test" },
 });

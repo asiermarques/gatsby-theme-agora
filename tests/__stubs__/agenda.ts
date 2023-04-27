@@ -5,7 +5,7 @@ import {
   AgendaCollectionDTO,
   AgendaDTO,
 } from "../../src/modules/agenda/infrastructure/dto/AgendaDTO";
-import { Agenda } from "../../src/modules/agenda/domain/Agenda";
+import { Agenda, TrackContent } from "../../src/modules/agenda/domain/Agenda";
 
 export const agendaDTOStub = (): AgendaDTO => ({
   venue: "Test",
@@ -77,9 +77,30 @@ export const agendaBasicStructureStub = (): Agenda => ({
         {
           type: TrackContentType.TALK,
           link: "/talks/talk",
-          description: "Test Foo",
+          description: "Speaker Name",
           title: "Test Talk",
         },
+      ],
+    },
+  ],
+});
+
+export const agendaBasicStructureWithTalkStub = (
+  talk: TrackContent
+): Agenda => ({
+  venue: "Test",
+  date: "00/00/00",
+  rows: [
+    {
+      slot: "00:00",
+      trackContents: [
+        {
+          type: TrackContentType.TALK,
+          link: "/talks/talk",
+          description: "Speaker Name",
+          title: "Test Talk",
+        },
+        talk,
       ],
     },
   ],

@@ -5,7 +5,7 @@ import { Agenda } from "../domain/Agenda";
 import { AgendaCollectionDTO } from "./dto/AgendaDTO";
 
 export class AgendaGraphqlRepository implements AgendaRepository {
-  findAll(): Agenda[] | Error {
+  findAll(): Agenda[] {
     const data = useStaticQuery(graphql`
       {
         speakers: allMarkdownRemark(
@@ -69,5 +69,3 @@ export class AgendaGraphqlRepository implements AgendaRepository {
     return mapAgendaInformation(agendaCollectionDTO);
   }
 }
-
-export const createRepository = () => new AgendaGraphqlRepository();
