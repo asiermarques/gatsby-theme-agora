@@ -26,11 +26,8 @@ export class SpeakerGraphqlRepository implements SpeakerRepository {
       }
     `);
 
-    return data.allMarkdownRemark.nodes.map((node: any) => ({
-      name: node.name,
-      title: node.title,
-      key: node.key,
-      image: node.image,
-    }));
+    return data.allMarkdownRemark.nodes.map(
+      (node: any) => node.frontmatter as SpeakerSummary
+    );
   }
 }

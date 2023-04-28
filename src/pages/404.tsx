@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../modules/_shared/components/Layout";
-import useStrings from "../hooks/use-strings";
+import { useStrings } from "../hooks/use-strings";
 import PageHead from "../modules/_shared/components/PageHeadContainer";
 
 export default () => {

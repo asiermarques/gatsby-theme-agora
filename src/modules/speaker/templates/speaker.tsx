@@ -4,25 +4,27 @@ import PageHead from "../../_shared/components/PageHeadContainer";
 import SpeakerSummary from "../components/SpeakerSummary";
 import { Speaker } from "../domain/Speaker";
 import { Link } from "gatsby";
-import useStrings from "../../../hooks/use-strings";
+import { useStrings } from "../../../hooks/use-strings";
 
-const strings = useStrings();
-export default (context: any) => (
-  <Layout isHome={false}>
-    <section id={"speaker-detail"}>
-      <div className="container">
-        <div className="col-12 col-sm-8 offset-sm-2">
-          <p>
-            <Link to={"/"} title={strings.back_to_home}>
-              {strings.back_to_home}
-            </Link>
-          </p>
-          <SpeakerSummary speaker={context.pageContext.speaker as Speaker} />
+export default (context: any) => {
+  const strings = useStrings();
+  return (
+    <Layout isHome={false}>
+      <section id={"speaker-detail"}>
+        <div className="container">
+          <div className="col-12 col-sm-8 offset-sm-2">
+            <p>
+              <Link to={"/"} title={strings.back_to_home}>
+                {strings.back_to_home}
+              </Link>
+            </p>
+            <SpeakerSummary speaker={context.pageContext.speaker as Speaker} />
+          </div>
         </div>
-      </div>
-    </section>
-  </Layout>
-);
+      </section>
+    </Layout>
+  );
+};
 
 export function Head(context: any) {
   return (

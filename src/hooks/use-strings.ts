@@ -13,10 +13,13 @@ const getConfiguredLanguage = () => {
       }
     }
   `);
-  return data.site.siteMetadata.siteLanguage || DEFAULT_LANGUAGE;
+
+  return data.site.siteMetadata.siteLanguage
+    ? data.site.siteMetadata.siteLanguage
+    : DEFAULT_LANGUAGE;
 };
 
-export default function useStrings() {
+export const useStrings = () => {
   const language = getConfiguredLanguage();
   return strings[language];
-}
+};
