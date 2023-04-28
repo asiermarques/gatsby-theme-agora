@@ -16,6 +16,7 @@ describe("TalkDetail component", () => {
         }}
       />
     );
+
     expect(screen.getByRole("heading", {})).toHaveTextContent(talk.title);
   });
 });

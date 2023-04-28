@@ -17,6 +17,7 @@ describe("Nav Component", () => {
       },
     ];
     render(<Nav items={data} />);
+
     expect(screen.getByRole("list", {})).toHaveTextContent("Test Link");
     expect(screen.getByRole("list", {})).toHaveTextContent("Test Link2");
   });

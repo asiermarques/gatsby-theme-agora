@@ -1,5 +1,6 @@
 module.exports = {
   siteUrl: "https://conference.com",
+  siteLanguage: "en",
   conferenceName: "Our awesome conference",
   conferenceDate: "5th May, Bilbao",
   conferenceClaim:

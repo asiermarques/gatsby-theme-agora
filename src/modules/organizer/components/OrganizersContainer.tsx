@@ -1,27 +1,9 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
 import Organizers from "./Organizers";
+import { useOrganizerRepository } from "../../../hooks/use-repository";
+import OrganizerRepository from "../domain/OrganizerRepository";
 
-const OrganizersContainer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allOrganizersYaml {
-          nodes {
-            name
-            image
-            imageProcessed {
-              childImageSharp {
-                gatsbyImageData(width: 400)
-              }
-            }
-            link
-          }
-        }
-      }
-    `}
-    render={(data) => <Organizers organizers={data.allOrganizersYaml.nodes} />}
-  />
-);
-
-export default OrganizersContainer;
+export default ({ repository }: { repository?: OrganizerRepository }) => {
+  const items = (repository ? repository : useOrganizerRepository()).findAll();
+  return <Organizers organizers={items} />;
+};

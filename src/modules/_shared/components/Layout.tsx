@@ -2,7 +2,7 @@ import React from "react";
 import "../../../styles/global.scss";
 import Header from "./HeaderContainer";
 import HeaderHome from "./HeaderHomeContainer";
-import Footer from "./FooterContainer";
+import Footer from "./Footer";
 
 export default ({ children, isHome }: { children: any; isHome: boolean }) => (
   <>

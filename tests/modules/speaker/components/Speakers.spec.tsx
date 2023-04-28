@@ -8,6 +8,7 @@ describe("Speakers Component", () => {
   it("Should show the speakers when there is speakers data", () => {
     const data = [speakerStub()];
     render(<Speakers speakers={data} />);
+
     expect(screen.getByRole("heading", {})).toHaveTextContent("Speaker Name");
     expect(screen.getByRole("link", {})).toHaveTextContent(
       "Speaker company role"

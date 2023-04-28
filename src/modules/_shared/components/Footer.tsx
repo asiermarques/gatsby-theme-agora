@@ -1,9 +1,8 @@
 import React from "react";
 import Organizers from "../../organizer/components/OrganizersContainer";
-import Nav from "../../link/components/Nav";
-import { Link } from "../../link/domain/Link";
+import Nav from "../../link/components/NavContainer";
 
-export default ({ links }: { links: Link[] }) => (
+export default () => (
   <footer>
     <section id="about">
       <div className="container">
@@ -12,7 +11,7 @@ export default ({ links }: { links: Link[] }) => (
             <Organizers />
           </div>
           <div className="col-md-5 text-center">
-            <Nav items={links} />
+            <Nav />
           </div>
         </div>
       </div>

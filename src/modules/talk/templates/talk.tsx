@@ -2,12 +2,12 @@ import * as React from "react";
 import Layout from "../../_shared/components/Layout";
 import PageHead from "../../_shared/components/PageHeadContainer";
 import SpeakerSummary from "../../speaker/components/SpeakerSummary";
-import useStrings from "../../_shared/hooks/use-strings";
+import useStrings from "../../../hooks/use-strings";
 import { Link } from "gatsby";
 import { Speaker } from "../../speaker/domain/Speaker";
 import TalkDetail from "../components/TalkDetail";
 
-const strings = useStrings("es");
+const strings = useStrings();
 export default (context: any) => (
   <Layout isHome={false}>
     <section id={"talk-detail"}>

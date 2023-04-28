@@ -1,5 +1,5 @@
-import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { SocialIcon } from "react-social-icons";
 import { Speaker } from "../domain/Speaker";
 
@@ -10,11 +10,13 @@ export default ({
   speaker: Speaker;
   className?: string;
 }) => (
-  <div className={"row speaker-summary " + className}>
+  <article className={"row speaker-summary " + className}>
     <div className="image col-sm-2 col-12">
       <GatsbyImage
         alt={speaker.name}
-        image={speaker.image?.childImageSharp?.gatsbyImageData}
+        image={
+          speaker.image?.childImageSharp?.gatsbyImageData as IGatsbyImageData
+        }
       />
     </div>
     <div className="col-sm-10 col-12">
@@ -42,5 +44,5 @@ export default ({
       </div>
       <div dangerouslySetInnerHTML={{ __html: speaker.bio }} />
     </div>
-  </div>
+  </article>
 );

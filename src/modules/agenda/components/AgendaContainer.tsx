@@ -1,15 +1,15 @@
 import * as React from "react";
 import Agenda from "./Agenda";
 import AgendaRepository from "../domain/AgendaRepository";
-import { AgendaGraphqlRepository } from "../infrastructure/AgendaGraphqlRepository";
+import { useAgendaRepository } from "../../../hooks/use-repository";
 
 export default ({
   agendaRepository,
 }: {
-  agendaRepository: AgendaRepository | undefined;
+  agendaRepository?: AgendaRepository;
 }) => {
   const repository: AgendaRepository = agendaRepository
     ? agendaRepository
-    : new AgendaGraphqlRepository();
+    : useAgendaRepository();
   return <Agenda agendaData={repository.findAll()} />;
 };

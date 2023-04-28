@@ -1,9 +1,10 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import useStrings from "../../_shared/hooks/use-strings";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import useStrings from "../../../hooks/use-strings";
+import { Organizer } from "../domain/Organizer";
 
-const strings = useStrings("es");
-const Organizers = ({ organizers }) => (
+const strings = useStrings();
+const Organizers = ({ organizers }: { organizers: Organizer[] }) => (
   <>
     <h4>{strings.organizers_title}</h4>
     <div className="row justify-content-start">
@@ -19,7 +20,8 @@ const Organizers = ({ organizers }) => (
               {organizer.imageProcessed?.childImageSharp?.gatsbyImageData && (
                 <GatsbyImage
                   image={
-                    organizer.imageProcessed?.childImageSharp?.gatsbyImageData
+                    organizer.imageProcessed?.childImageSharp
+                      ?.gatsbyImageData as IGatsbyImageData
                   }
                   alt={organizer.name}
                   className="img-thumbnail"

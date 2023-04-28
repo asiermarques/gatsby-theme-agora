@@ -11,38 +11,22 @@ import {
   agendaCollectionDTOStubWithAnAgendaWithoutContent,
   agendaCollectionDTOWithBadTalkConfigurationStub,
   agendaCollectionDTOWithBadTrackContentTypeConfigurationStub,
-  agendaDTOStub,
   emptyAgendaCollectionDTOStub,
 } from "../../../__stubs__/agenda";
-import { speakerDTOStub } from "../../../__stubs__/speaker";
-import { talkDTOStub } from "../../../__stubs__/talk";
 
-describe("AgendaMappers", () => {
-  it("Map agendaCollectionDTO to a domain Agenda collection when all the data is configured correctly", () => {
+describe("AgendaMappers mapAgendaInformation when we have a green path", () => {
+  it("map agendaCollectionDTO to a domain Agenda collection when all the data is configured correctly", () => {
     const agendaCollectionDTOStub: AgendaCollectionDTO =
       agendaCollectionDTOBasicStub();
     const expected: Agenda[] = [agendaBasicStructureStub()];
+
     expect(mapAgendaInformation(agendaCollectionDTOStub)).toMatchObject(
       expected
     );
   });
+});
 
-  it("Map agendaCollectionDTO to a domain Agenda collection when there is no data", () => {
-    expect(mapAgendaInformation(emptyAgendaCollectionDTOStub)).toMatchObject(
-      []
-    );
-
-    expect(
-      mapAgendaInformation(agendaCollectionDTOStubWithAnAgendaWithoutContent)
-    ).toMatchObject([
-      {
-        venue: "",
-        rows: [],
-        date: "",
-      },
-    ]);
-  });
-
+describe("AgendaMappers mapAgendaInformation when we have incorrect configurations", () => {
   it("AgendaCollectionDTO throws an error if talk doesn't exists", () => {
     const agendaCollectionDTOStub: AgendaCollectionDTO =
       agendaCollectionDTOWithBadTalkConfigurationStub();
@@ -55,8 +39,29 @@ describe("AgendaMappers", () => {
   it("AgendaCollectionDTO throws an error if content type is not supported", () => {
     const agendaCollectionDTOStub: AgendaCollectionDTO =
       agendaCollectionDTOWithBadTrackContentTypeConfigurationStub();
+
     expect(() => mapAgendaInformation(agendaCollectionDTOStub)).toThrow(
       AgendaContentTypeNotSupportedError
     );
+  });
+});
+
+describe("AgendaMappers mapAgendaInformation when there is no data", () => {
+  it("and map agendaCollectionDTO to a domain Agenda collection when there is no data", () => {
+    expect(mapAgendaInformation(emptyAgendaCollectionDTOStub)).toMatchObject(
+      []
+    );
+  });
+
+  it("and map agendaCollectionDTO to a domain Agenda when there is not content in a configured agenda", () => {
+    expect(
+      mapAgendaInformation(agendaCollectionDTOStubWithAnAgendaWithoutContent)
+    ).toMatchObject([
+      {
+        venue: "",
+        rows: [],
+        date: "",
+      },
+    ]);
   });
 });

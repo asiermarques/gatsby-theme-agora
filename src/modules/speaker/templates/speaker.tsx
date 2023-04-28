@@ -4,9 +4,9 @@ import PageHead from "../../_shared/components/PageHeadContainer";
 import SpeakerSummary from "../components/SpeakerSummary";
 import { Speaker } from "../domain/Speaker";
 import { Link } from "gatsby";
-import useStrings from "../../_shared/hooks/use-strings";
+import useStrings from "../../../hooks/use-strings";
 
-const strings = useStrings("es");
+const strings = useStrings();
 export default (context: any) => (
   <Layout isHome={false}>
     <section id={"speaker-detail"}>
