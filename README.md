@@ -1,4 +1,7 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/asiermarques/gatsby-theme-conferencer/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/asiermarques/gatsby-theme-conferencer/tree/main)
+![Lighthouse accessibility](tests/.lighthouse/test-results/lighthouse_accessibility.svg)
+![Lighthouse best practices](tests/.lighthouse/test-results/lighthouse_best-practices.svg)
+![Lighthouse performance](tests/.lighthouse/test-results/lighthouse_performance.svg)
 
 > Not ready for production use yet
 

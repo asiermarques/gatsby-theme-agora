@@ -16,5 +16,5 @@ export default () => {
       }
     }
   `);
-  return <Header conferenceName={data.site.siteMetadata.conferenceName} />;
+  return <Header conferenceName={data?.site?.siteMetadata?.conferenceName} />;
 };

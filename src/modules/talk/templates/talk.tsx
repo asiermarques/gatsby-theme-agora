@@ -5,6 +5,7 @@ import SpeakerSummary from "../../speaker/components/SpeakerSummary";
 import useStrings from "../../_shared/hooks/use-strings";
 import { Link } from "gatsby";
 import { Speaker } from "../../speaker/domain/Speaker";
+import TalkDetail from "../components/TalkDetail";
 
 const strings = useStrings("es");
 export default (context: any) => (
@@ -17,13 +18,8 @@ export default (context: any) => (
               {strings.back_to_home}
             </Link>
           </p>
-          <h1>{context.pageContext.talk.title}</h1>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: context.pageContext.talk.description,
-            }}
-          />
-          {context.pageContext.talk.speakers.map(
+          <TalkDetail talk={context.pageContext?.talk} />
+          {context.pageContext?.talk?.speakers?.map(
             (speaker: Speaker, index: number) => (
               <div key={index}>
                 <SpeakerSummary
@@ -41,5 +37,7 @@ export default (context: any) => (
 );
 
 export function Head(context: any) {
-  return <PageHead bodyClassName={""} title={context.pageContext.talk.title} />;
+  return (
+    <PageHead bodyClassName={""} title={context.pageContext?.talk?.title} />
+  );
 }

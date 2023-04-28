@@ -19,12 +19,12 @@ export default () => {
   `);
   return (
     <HeaderHome
-      conferenceName={data.site.siteMetadata.conferenceName}
-      conferenceClaim={data.site.siteMetadata.conferenceClaim}
-      conferenceDate={data.site.siteMetadata.conferenceDate}
+      conferenceName={data.site?.siteMetadata?.conferenceName}
+      conferenceClaim={data.site?.siteMetadata?.conferenceClaim}
+      conferenceDate={data.site?.siteMetadata?.conferenceDate}
       cta={{
-        link: data.site.siteMetadata.ticketsCTALink,
-        text: data.site.siteMetadata.ticketsCTAText,
+        link: data.site?.siteMetadata?.ticketsCTALink,
+        text: data.site?.siteMetadata?.ticketsCTAText,
       }}
     />
   );
