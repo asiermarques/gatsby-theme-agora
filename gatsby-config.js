@@ -20,7 +20,7 @@ module.exports = (themeOptions) => {
       {
         resolve: "gatsby-plugin-manifest",
         options: {
-          icon: "src/static/images/favicon.png",
+          icon: "static/images/favicon.png",
         },
       },
       {
@@ -44,7 +44,7 @@ module.exports = (themeOptions) => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "images",
-          path: `./src/static/images/`,
+          path: `./static/images/`,
         },
         __key: "images",
       },

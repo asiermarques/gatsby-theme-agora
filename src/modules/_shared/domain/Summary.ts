@@ -1,5 +1,6 @@
+import { Cta } from "./Cta";
+
 export type Summary = {
   description: string;
-  ctaLink: string;
-  ctaText: string;
+  cta: Cta;
 };

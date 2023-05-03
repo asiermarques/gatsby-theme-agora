@@ -14,9 +14,11 @@ export default ({
       {summary.description}
     </p>
     <p>
-      <a className={"btn"} href={summary.ctaLink}>
-        {summary.ctaText}
-      </a>
+      {summary.cta && (
+        <a className={"btn"} href={summary.cta.link}>
+          {summary.cta.text}
+        </a>
+      )}
     </p>
   </section>
 );

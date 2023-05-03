@@ -1,20 +1,8 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import Header from "./Header";
+import { useConfig } from "../../../hooks/use-config";
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          conferenceName
-          conferenceDate
-          conferenceClaim
-          ticketsCTALink
-          ticketsCTAText
-        }
-      }
-    }
-  `);
-  return <Header conferenceName={data?.site?.siteMetadata?.conferenceName} />;
+  const config = useConfig();
+  return <Header conferenceName={config.conferenceInfo.name} />;
 };

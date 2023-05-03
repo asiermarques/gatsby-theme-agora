@@ -1,6 +1,7 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import PageHead from "./PageHead";
+import { useConfig } from "../../../hooks/use-config";
+import {getSrc} from "gatsby-plugin-image";
 
 export default ({
   bodyClassName,
@@ -11,29 +12,14 @@ export default ({
   title?: string;
   description?: string;
 }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          siteUrl
-          conferenceDate
-          conferenceHashtag
-          conferenceName
-          conferenceClaim
-          bannerImage
-        }
-      }
-    }
-  `);
+  const config = useConfig();
   const titleHtml = title
-    ? title + " | " + data.site.siteMetadata.conferenceName
-    : data.site.siteMetadata.conferenceName;
+    ? title + " | " + config.conferenceInfo.name
+    : config.conferenceInfo.name;
   const descriptionHtml = description
     ? description
-    : data.site.siteMetadata.conferenceClaim +
-      ", " +
-      data.site.siteMetadata.conferenceDate;
-  const ogImage = data.site.siteMetadata.bannerImage;
+    : config.conferenceInfo.claim + ", " + config.conferenceInfo.dateDetails;
+  const ogImage = getSrc(config.conferenceInfo.shareImage?.childImageSharp?.gatsbyImageData);
   return (
     <PageHead
       title={titleHtml}

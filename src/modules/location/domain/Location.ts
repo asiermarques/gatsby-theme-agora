@@ -1,4 +1,4 @@
 export type Location = {
   mapIframeUrl: string;
-  address: string;
+  venueInformation: string;
 };

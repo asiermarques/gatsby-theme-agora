@@ -7,5 +7,5 @@ export default ({ repository }: { repository?: LocationRepository }) => {
   const location = (
     repository ? repository : useLocationRepository()
   ).getConfiguredLocation();
-  return <Location data={location} />;
+  return <Location location={location} />;
 };

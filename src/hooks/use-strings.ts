@@ -1,22 +1,13 @@
 import strings from "../strings/all-strings";
 import { graphql, useStaticQuery } from "gatsby";
+import { useConfig } from "./use-config";
 
 export const DEFAULT_LANGUAGE = "en";
 
 const getConfiguredLanguage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          siteLanguage
-        }
-      }
-    }
-  `);
+  const config = useConfig();
 
-  return data.site.siteMetadata.siteLanguage
-    ? data.site.siteMetadata.siteLanguage
-    : DEFAULT_LANGUAGE;
+  return config.siteInfo.language ? config.siteInfo.language : DEFAULT_LANGUAGE;
 };
 
 export const useStrings = () => {

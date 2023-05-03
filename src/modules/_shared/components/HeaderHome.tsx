@@ -2,6 +2,7 @@ import React from "react";
 import nl2br from "react-nl2br";
 import { Link } from "gatsby";
 import LogoImage from "./LogoImage";
+import { TicketsCTA } from "../domain/Cta";
 
 export default ({
   conferenceClaim,
@@ -12,13 +13,13 @@ export default ({
   conferenceClaim: string;
   conferenceName: string;
   conferenceDate: string;
-  cta: { text: string; link: string };
+  cta: TicketsCTA;
 }) => (
   <>
     <header className={"home"}>
       <div className="container">
         <Link className={"logo"} to={"/"}>
-          <LogoImage alt={conferenceName} />
+          <LogoImage />
         </Link>
         <h1>{conferenceClaim}</h1>
         <h2>{conferenceDate}</h2>

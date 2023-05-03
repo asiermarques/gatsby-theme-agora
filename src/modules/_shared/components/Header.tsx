@@ -7,7 +7,7 @@ export default ({ conferenceName }: { conferenceName: string }) => (
     <header>
       <div className="container">
         <Link to={"/"} title={conferenceName} className={"logo"}>
-          <LogoImage alt={conferenceName} />
+          <LogoImage />
         </Link>
       </div>
     </header>

@@ -1,31 +1,15 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import HeaderHome from "./HeaderHome";
+import { useConfig } from "../../../hooks/use-config";
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          conferenceName
-          conferenceName
-          conferenceDate
-          conferenceClaim
-          ticketsCTALink
-          ticketsCTAText
-        }
-      }
-    }
-  `);
+  const config = useConfig();
   return (
     <HeaderHome
-      conferenceName={data.site?.siteMetadata?.conferenceName}
-      conferenceClaim={data.site?.siteMetadata?.conferenceClaim}
-      conferenceDate={data.site?.siteMetadata?.conferenceDate}
-      cta={{
-        link: data.site?.siteMetadata?.ticketsCTALink,
-        text: data.site?.siteMetadata?.ticketsCTAText,
-      }}
+      conferenceName={config.conferenceInfo.name}
+      conferenceClaim={config.conferenceInfo.claim}
+      conferenceDate={config.conferenceInfo.dateDetails}
+      cta={config.conferenceInfo.ticketsCta}
     />
   );
 };

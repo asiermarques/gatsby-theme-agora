@@ -1,12 +1,13 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { useConfig } from "../../../hooks/use-config";
 
-const Logo = ({ alt }: { alt: string }) => (
-  <StaticImage
-    src="../../../static/images/logo.png"
-    imgStyle={{ transition: "none", transform: "none", willChange: "inherit" }}
-    alt={alt}
-  />
-);
-
-export default Logo;
+export default () => {
+  const config = useConfig();
+  return (
+    <GatsbyImage
+      alt={config.conferenceInfo.name}
+      image={config.conferenceInfo.logoImage?.childImageSharp?.gatsbyImageData}
+    />
+  );
+};

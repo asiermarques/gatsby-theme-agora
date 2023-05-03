@@ -16,6 +16,14 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       interfaces: ["Node"],
     }),
     schema.buildObjectType({
+      name: "ConfigYaml",
+      fields: {
+        conferenceName: "String",
+        logoImage: "String",
+      },
+      interfaces: ["Node"],
+    }),
+    schema.buildObjectType({
       name: "MarkdownRemarkFrontmatterSocial",
       fields: {
         twitter: "String",
