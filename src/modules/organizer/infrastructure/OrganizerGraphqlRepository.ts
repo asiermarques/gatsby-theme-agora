@@ -9,8 +9,7 @@ export class OrganizerGraphqlRepository implements OrganizerRepository {
         allOrganizersYaml {
           nodes {
             name
-            image
-            imageProcessed {
+            image {
               childImageSharp {
                 gatsbyImageData(width: 400)
               }

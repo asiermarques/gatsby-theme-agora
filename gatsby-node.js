@@ -7,15 +7,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   const typeDefs = [
     schema.buildObjectType({
-      name: "OrganizersYaml",
-      fields: {
-        name: "String!",
-        link: "String!",
-        image: "String!",
-      },
-      interfaces: ["Node"],
-    }),
-    schema.buildObjectType({
       name: "ConfigYaml",
       fields: {
         conferenceName: "String",

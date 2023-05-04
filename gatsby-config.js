@@ -33,14 +33,6 @@ module.exports = (themeOptions) => {
         },
       },
       {
-        resolve: `gatsby-plugin-remote-images`,
-        options: {
-          nodeType: "OrganizersYaml",
-          imagePath: "image",
-          name: "imageProcessed",
-        },
-      },
-      {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "images",

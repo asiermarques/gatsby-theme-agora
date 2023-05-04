@@ -1,7 +1,7 @@
 import * as React from "react";
 import PageHead from "./PageHead";
 import { useConfig } from "../../../hooks/use-config";
-import {getSrc} from "gatsby-plugin-image";
+import { getSrc } from "gatsby-plugin-image";
 
 export default ({
   bodyClassName,
@@ -19,7 +19,9 @@ export default ({
   const descriptionHtml = description
     ? description
     : config.conferenceInfo.claim + ", " + config.conferenceInfo.dateDetails;
-  const ogImage = getSrc(config.conferenceInfo.shareImage?.childImageSharp?.gatsbyImageData);
+  const ogImage = getSrc(
+    config.conferenceInfo.shareImage?.childImageSharp?.gatsbyImageData
+  );
   return (
     <PageHead
       title={titleHtml}

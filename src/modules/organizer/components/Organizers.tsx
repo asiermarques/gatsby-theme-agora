@@ -18,10 +18,10 @@ const Organizers = ({ organizers }: { organizers: Organizer[] }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {organizer.imageProcessed?.childImageSharp?.gatsbyImageData && (
+                {organizer.image?.childImageSharp?.gatsbyImageData && (
                   <GatsbyImage
                     image={
-                      organizer.imageProcessed?.childImageSharp
+                      organizer.image?.childImageSharp
                         ?.gatsbyImageData as IGatsbyImageData
                     }
                     alt={organizer.name}

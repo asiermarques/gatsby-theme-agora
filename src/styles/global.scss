@@ -1,18 +1,3 @@
-// https://coolors.co/palette/ffffff-6aa0c4-a3ce54-2f4858-ad3522
-
-$light: #ffffff;
-$primary: #2f4858;
-$secondary: #a3ce54;
-$main-color1: $primary;
-$main-color2: #ad3522;
-$main-color3: $light;
-$main-color4: #6aa0c4;
-$main-color5: $secondary;
-$enable-rounded: false;
-
-$headings-color: $primary;
-
-$font-size-base: 1.6rem;
 @import "~bootstrap/scss/bootstrap";
 
 header {
