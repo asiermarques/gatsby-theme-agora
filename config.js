@@ -1,4 +1,5 @@
 module.exports = {
+  siteUrl: "http://localhost.com:8080/",
   siteInfo: {
     language: "en",
     url: "https://conf.com",
