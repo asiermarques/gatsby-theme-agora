@@ -173,4 +173,11 @@ footer {
   a.nav-link {
     text-decoration: underline;
   }
+  .footerNotes {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $primary;
+    font-size: 1rem;
+    text-align: center;
+  }
 }

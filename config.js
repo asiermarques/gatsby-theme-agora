@@ -2,6 +2,8 @@ module.exports = {
   siteInfo: {
     language: "en",
     url: "https://conf.com",
+    footerNotes:
+      "Created with [Gatsby Theme Conferencer](https://github.com/asiermarques/gatsby-theme-conferencer)",
   },
   conferenceInfo: {
     name: "Our Conference",

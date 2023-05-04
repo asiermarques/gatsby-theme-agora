@@ -9,6 +9,7 @@ export const useConfig = (): Config => {
           siteInfo {
             language
             url
+            footerNotes
           }
           conferenceInfo {
             hashTag
@@ -34,6 +35,7 @@ export const useConfig = (): Config => {
           siteInfo {
             language
             url
+            footerNotes
           }
           conferenceInfo {
             hashTag

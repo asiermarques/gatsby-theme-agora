@@ -5,6 +5,7 @@ import { Location } from "../../location/domain/Location";
 export type SiteInfo = {
   language: string;
   url: string;
+  footerNotes?: string;
 };
 
 export type Config = {
