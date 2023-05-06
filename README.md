@@ -31,9 +31,9 @@ Not yet but prioritized:
 
 ## Getting started
 
-### Option 1 (recommended): Using the template 
+### Option 1 (recommended): Using the template
 
-You can use the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template) of the demo site that is fully configured and ready to be used.  
+You can use the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template) of the demo site that is fully configured and ready to be used.
 
 ### Option 2: Follow the following steps
 
@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-conferencer",
       options: {
-          siteUrl: "https://yourdomain.com"
+        siteUrl: "https://yourdomain.com",
       },
     },
   ],
@@ -125,7 +125,7 @@ summary:
   description: A little description for the conference, what is the audience, why is interesting to the people and this kind of stuff
   # optional
   cta:
-    text: Agenda 
+    text: Agenda
     link: "#agenda"
 
 location:
