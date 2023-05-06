@@ -1,18 +1,12 @@
 import * as React from "react";
-import Layout from "../components/Layout";
 import PageHead from "../components/PageHeadContainer";
+import InternalPage from "../components/InternalPage";
 
 export default (context: any) => (
-  <Layout isHome={false}>
-    <section id={"page-detail"}>
-      <div className="container">
-        <h1>{context.pageContext.page.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: context.pageContext.page.content }}
-        />
-      </div>
-    </section>
-  </Layout>
+  <InternalPage
+    title={context.pageContext.page.title}
+    content={context.pageContext.page.content}
+  />
 );
 
 export function Head(context: any) {
