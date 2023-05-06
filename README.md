@@ -3,11 +3,11 @@
 ![Lighthouse best practices](tests/.lighthouse/test-results/lighthouse_best-practices.svg)
 ![Lighthouse performance](tests/.lighthouse/test-results/lighthouse_performance.svg)
 
-> Not ready for production use yet
-
 # Gatsby Conferencer theme
 
 A Gatsby theme to generate simple events and conferences landings pages.
+
+**See the [live demo](https://gatsby-conferencer-demo.netlify.app)** generated from the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template)!
 
 Features:
 
@@ -33,7 +33,7 @@ Not yet but prioritized:
 
 ### Using the template (recommended)
 
-> todo
+You can use the  template repository with all the required configuration ready to be used.  
 
 ### Install the theme
 
@@ -50,7 +50,9 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-theme-conferencer",
-      options: {},
+      options: {
+          siteUrl: "https://yourdomain.com"
+      },
     },
   ],
 };
@@ -86,7 +88,7 @@ content
 The general configuration can be set in the content/config/config.yaml file, the default information is
 
 > _Important note with images_: if your received the error "Cannot return null for non-nullable field ConfigYamlConferenceInfo.xxxImage",
-> check if the relative path for the image is right
+> check if the relative path for the image is correct. This happens when the image can't be found.
 
 ```yaml
 siteInfo:
@@ -121,17 +123,16 @@ summary:
   description: A little description for the conference, what is the audience, why is interesting to the people and this kind of stuff
   # optional
   cta:
-    text: Agenda and tickets soon
-    link: #agenda
+    text: Agenda 
+    link: "#agenda"
 
 location:
   # required
-  mapIframeUrl: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.5333947155564!2d-2.9305296241199597!3d43.261200071123504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4f60c07fc049%3A0xd353dbcd51c2ff07!2sBAT%20%7C%20B%20Accelerator%20Tower!5e0!3m2!1ses!2snl!4v1681998466816!5m2!1ses!2snl
+  mapIframeUrl: https://www.openstreetmap.org/export/embed.html?bbox=-3.0432558059692383%2C43.273112177849896%2C-2.9591417312622075%2C43.31212645126047&amp;layer=mapnik
   # required
   venueInformation: |
-    Edificio BAT, Auditorio 6ª Planta 
-    Gran Vía de Don Diego López de Haro 1 
-    48001 Bilbo, Bizkaia, España
+    Jardin Botánico s/n
+    48902 Barakaldo, España
 ```
 
 #### Adding an speaker
