@@ -1,7 +1,7 @@
 import React from "react";
 import Organizers from "../../organizer/components/OrganizersContainer";
 import Nav from "../../link/components/NavContainer";
-import FooterNotes from "./FooterNotes";
+import FooterNotes from "./FooterNotesContainer";
 
 export default () => (
   <footer>

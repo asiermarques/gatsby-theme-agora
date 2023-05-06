@@ -85,7 +85,7 @@ content
 
 The general configuration can be set in the content/config/config.yaml file, the default information is
 
-> *Important note with images*: if your received the error "Cannot return null for non-nullable field ConfigYamlConferenceInfo.xxxImage",
+> _Important note with images_: if your received the error "Cannot return null for non-nullable field ConfigYamlConferenceInfo.xxxImage",
 > check if the relative path for the image is right
 
 ```yaml
@@ -94,7 +94,7 @@ siteInfo:
   language: en
   # required, the site url
   url: https://conference.com
-  # optional, the footer notes. You can specify null to remove all the footer notes. 
+  # optional, the footer notes. You can specify null to remove all the footer notes.
   # They can be written in markdown
   footerNotes: Created with [Gatsby Theme Conferencer](https://github.com/asiermarques/gatsby-theme-conferencer)
 

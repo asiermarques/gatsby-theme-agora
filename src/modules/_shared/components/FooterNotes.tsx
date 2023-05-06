@@ -1,14 +1,12 @@
 import React from "react";
-import { useConfig } from "../../../hooks/use-config";
 import Markdown from "markdown-to-jsx";
 
-export default () => {
-  const config = useConfig();
+export default ({ footerNotes }: { footerNotes?: string }) => {
   return (
     <>
-      {config.siteInfo.footerNotes && (
+      {footerNotes && (
         <p className={"footerNotes"}>
-          <Markdown>{config.siteInfo.footerNotes}</Markdown>
+          <Markdown>{footerNotes}</Markdown>
         </p>
       )}
     </>
