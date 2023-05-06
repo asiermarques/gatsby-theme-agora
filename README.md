@@ -33,7 +33,7 @@ Not yet but prioritized:
 
 ### Using the template (recommended)
 
-You can use the  template repository with all the required configuration ready to be used.  
+You can use the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template) of the demo site that is fully configured and ready to be used.  
 
 ### Install the theme
 
