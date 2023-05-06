@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-agora",
   "description": "A minimalist theme for creating landing pages for conferences and meetups",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "main": "index.js",
   "author": "Asier Marqués <asiermarques@gmail.com> (@asiermarques)",
   "license": "MIT",

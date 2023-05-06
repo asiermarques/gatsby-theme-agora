@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/asiermarques/gatsby-theme-conferencer/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/asiermarques/gatsby-theme-conferencer/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/asiermarques/gatsby-theme-conferencer/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/asiermarques/gatsby-theme-agora/tree/main)
 ![Lighthouse accessibility](tests/.lighthouse/test-results/lighthouse_accessibility.svg)
 ![Lighthouse best practices](tests/.lighthouse/test-results/lighthouse_best-practices.svg)
 ![Lighthouse performance](tests/.lighthouse/test-results/lighthouse_performance.svg)
@@ -7,7 +7,7 @@
 
 A Gatsby theme to generate simple events and conferences landings pages.
 
-**See the [live demo](https://gatsby-conferencer-demo.netlify.app)** generated from the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template)!
+**See the [live demo](https://gatsby-agora-demo.netlify.app)** generated from the [template repository](https://github.com/asiermarques/gatsby-agora-site-template)!
 
 Features:
 
@@ -27,13 +27,13 @@ Not yet but prioritized:
 - PostEvent documentation (images, videos, etc)
 - Stats in the home
 
-> **You can open [a PR](https://github.com/asiermarques/gatsby-theme-conferencer/pulls) with the label "proposal" to ask for more features!**
+> **You can open [a PR](https://github.com/asiermarques/gatsby-theme-agora/pulls) with the label "proposal" to ask for more features!**
 
 ## Getting started
 
 ### Option 1 (recommended): Using the template
 
-You can use the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template) of the demo site that is fully configured and ready to be used.
+You can use the [template repository](https://github.com/asiermarques/gatsby-agora-site-template) of the demo site that is fully configured and ready to be used.
 
 ### Option 2: Follow the following steps
 
@@ -42,7 +42,7 @@ You can use the [template repository](https://github.com/asiermarques/gatsby-con
 Install the theme dependency in your gatsby site
 
 ```shell
-yarn add gatsby-theme-conferencer
+yarn add gatsby-theme-agora
 ```
 
 Add the theme in your `gatsby-config.js` file
@@ -51,7 +51,7 @@ Add the theme in your `gatsby-config.js` file
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-conferencer",
+      resolve: "gatsby-theme-agora",
       options: {
         siteUrl: "https://yourdomain.com",
       },
@@ -100,7 +100,7 @@ siteInfo:
   url: https://conference.com
   # optional, the footer notes. You can specify null to remove all the footer notes.
   # They can be written in markdown
-  footerNotes: Created with [Gatsby Theme Conferencer](https://github.com/asiermarques/gatsby-theme-conferencer)
+  footerNotes: Created with [Gatsby Theme Agora](https://github.com/asiermarques/gatsby-theme-agora)
 
 conferenceInfo:
   # required

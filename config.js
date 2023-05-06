@@ -4,7 +4,7 @@ module.exports = {
     language: "en",
     url: "https://conf.com",
     footerNotes:
-      "Created with [Gatsby Theme Conferencer](https://github.com/asiermarques/gatsby-theme-conferencer)",
+      "Created with [Gatsby Theme Ágora](https://github.com/asiermarques/gatsby-theme-agora)",
   },
   conferenceInfo: {
     name: "Our Conference",
