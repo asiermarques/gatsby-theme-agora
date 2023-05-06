@@ -31,11 +31,13 @@ Not yet but prioritized:
 
 ## Getting started
 
-### Using the template (recommended)
+### Option 1 (recommended): Using the template 
 
 You can use the [template repository](https://github.com/asiermarques/gatsby-conferencer-site-template) of the demo site that is fully configured and ready to be used.  
 
-### Install the theme
+### Option 2: Follow the following steps
+
+#### Install the theme
 
 Install the theme dependency in your gatsby site
 
@@ -58,7 +60,7 @@ module.exports = {
 };
 ```
 
-### Configure and add content to your conference site
+#### Configure and add content to your conference site
 
 All the configuration and content resides in the /content directory in the root of the gatsby project.  
 The structure should be similar to this:
@@ -83,7 +85,7 @@ content
     └── talk-2.md
 ```
 
-#### Configuration file
+##### Add the Configuration file
 
 The general configuration can be set in the content/config/config.yaml file, the default information is
 
@@ -135,7 +137,7 @@ location:
     48902 Barakaldo, España
 ```
 
-#### Adding an speaker
+##### Adding an speaker
 
 You can create a markdown file with the speaker data in the `content/speakers` directory.  
 The markdown file should have the following meta structure:
@@ -155,7 +157,7 @@ social:
 Text for the bio
 ```
 
-#### Adding a talk
+##### Adding a talk
 
 You can create a markdown file with the speaker data in the `content/talks` directory.  
 The markdown file should have the following meta structure:
@@ -170,7 +172,7 @@ title: required, the title for the talk
 The talk description
 ```
 
-#### Adding the talk for an agenda slot
+####3 Adding the talk for an agenda slot
 
 You should add the talk to the `content/agenda.yaml` file in order to be shown in the agenda.  
 The talk is added by its key, for example:
