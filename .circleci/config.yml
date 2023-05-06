@@ -28,9 +28,11 @@ workflows:
   test:
     jobs:
       - test
-  tagged-build:
+  tagged_build:
     jobs:
       - publish:
           filters:
-          tags:
-            only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
