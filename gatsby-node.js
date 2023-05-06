@@ -7,6 +7,48 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   const typeDefs = [
     schema.buildObjectType({
+      name: "ConfigYamlSiteInfo",
+      fields: {
+        language: "String",
+        url: "String!",
+        footerNotes: "String",
+      },
+      interfaces: ["Node"],
+    }),
+    schema.buildObjectType({
+      name: "CTA",
+      fields: {
+        text: "String!",
+        link: "String!",
+      },
+      interfaces: ["Node"],
+    }),
+    `type ConfigYamlConferenceInfo @infer {
+      name: String!,
+      claim: String!,
+      date: String!,
+      hashtag: String!,
+      shareImage: File! @fileByRelativePath,
+      logoImage: File! @fileByRelativePath,
+      ticketsCTA: CTA
+    }`,
+    schema.buildObjectType({
+      name: "Summary",
+      fields: {
+        description: "String!",
+        cta: "CTA",
+      },
+      interfaces: ["Node"],
+    }),
+    schema.buildObjectType({
+      name: "Location",
+      fields: {
+        mapIframeUrl: "String!",
+        venueInformation: "String!",
+      },
+      interfaces: ["Node"],
+    }),
+    schema.buildObjectType({
       name: "MarkdownRemarkFrontmatterSocial",
       fields: {
         twitter: "String",

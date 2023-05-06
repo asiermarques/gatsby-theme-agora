@@ -85,30 +85,49 @@ content
 
 The general configuration can be set in the content/config/config.yaml file, the default information is
 
+> *Important note with images*: if your received the error "Cannot return null for non-nullable field ConfigYamlConferenceInfo.xxxImage",
+> check if the relative path for the image is right
+
 ```yaml
 siteInfo:
+  # optional, the language of the site
   language: en
+  # required, the site url
   url: https://conference.com
+  # optional, the footer notes. You can specify null to remove all the footer notes. 
+  # They can be written in markdown
+  footerNotes: Created with [Gatsby Theme Conferencer](https://github.com/asiermarques/gatsby-theme-conferencer)
 
 conferenceInfo:
+  # required
   name: Awesome Conference
+  # required
   claim: A great conference for developers and other mystical creatures
+  # required
   date: 5th May, Bilbao
+  # required
   logoImage: images/logo.png
+  # required
   hashTag: "#conference"
+  # required
   shareImage: images/banner.png
+  # optional
   ticketsCta:
     text: Get your ticket!
     link: "https://example.com"
 
 summary:
+  # required
   description: A little description for the conference, what is the audience, why is interesting to the people and this kind of stuff
+  # optional
   cta:
     text: Agenda and tickets soon
     link: #agenda
 
 location:
+  # required
   mapIframeUrl: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.5333947155564!2d-2.9305296241199597!3d43.261200071123504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4f60c07fc049%3A0xd353dbcd51c2ff07!2sBAT%20%7C%20B%20Accelerator%20Tower!5e0!3m2!1ses!2snl!4v1681998466816!5m2!1ses!2snl
+  # required
   venueInformation: |
     Edificio BAT, Auditorio 6ª Planta 
     Gran Vía de Don Diego López de Haro 1 
