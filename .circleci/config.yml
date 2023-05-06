@@ -19,8 +19,6 @@ jobs:
       tag: "20.0.0"
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
       - run:
           name: Publish to NPM
           command: "npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN && npm publish"
