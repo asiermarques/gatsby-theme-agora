@@ -1,14 +1,19 @@
 {
-  "name": "gatsby-theme-conferencer",
-  "version": "1.0.24",
+  "name": "gatsby-theme-agora",
+  "description": "A minimalist theme for creating landing pages for conferences and meetups",
+  "version": "1.0.25",
   "main": "index.js",
   "author": "Asier Marqués <asiermarques@gmail.com> (@asiermarques)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asiermarques/gatsby-theme-agora"
+  },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
     "gatsby-theme",
-    "event website",
+    "meetup landing page",
     "conference landing page"
   ],
   "peerDependencies": {

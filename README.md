@@ -3,7 +3,7 @@
 ![Lighthouse best practices](tests/.lighthouse/test-results/lighthouse_best-practices.svg)
 ![Lighthouse performance](tests/.lighthouse/test-results/lighthouse_performance.svg)
 
-# Gatsby Conferencer theme
+# Gatsby theme Ágora
 
 A Gatsby theme to generate simple events and conferences landings pages.
 
